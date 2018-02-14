@@ -26,8 +26,8 @@ namespace CityStatsTest
             for (int i = 0; i < expected_s.Length; i+=2)
             {
                 if (expected.ContainsKey(expected_s[i].Substring(0, 1).ToUpper() + expected_s[i].Substring(1)))
-                    expected[expected_s[i].Substring(0, 1).ToUpper() + expected_s[i].Substring(1)] += Convert.ToInt32(expected_s[i + 1]);
-                else expected.Add(expected_s[i].Substring(0, 1).ToUpper() + expected_s[i].Substring(1), Convert.ToInt32(expected_s[i + 1]));
+                    expected[expected_s[i].Substring(0, 1).ToUpper() + expected_s[i].Substring(1)] += Convert.ToInt32(expected_s[i + 1].Trim());
+                else expected.Add(expected_s[i].Substring(0, 1).ToUpper() + expected_s[i].Substring(1), Convert.ToInt32(expected_s[i + 1].Trim()));
             }
             
         }

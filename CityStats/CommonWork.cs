@@ -29,8 +29,8 @@ namespace CityStats
                 try
                 {
                     if (dictionary.ContainsKey(parseStrings[i].Substring(0, 1).ToUpper() + parseStrings[i].Substring(1)))
-                        dictionary[parseStrings[i].Substring(0, 1).ToUpper() + parseStrings[i].Substring(1)] += Convert.ToInt32(parseStrings[i + 1]);
-                    else dictionary.Add(parseStrings[i].Substring(0, 1).ToUpper() + parseStrings[i].Substring(1), Convert.ToInt32(parseStrings[i + 1]));
+                        dictionary[parseStrings[i].Substring(0, 1).ToUpper() + parseStrings[i].Substring(1)] += Convert.ToInt32(parseStrings[i + 1].Trim());
+                    else dictionary.Add(parseStrings[i].Substring(0, 1).ToUpper() + parseStrings[i].Substring(1), Convert.ToInt32(parseStrings[i + 1].Trim()));
                 }
                 catch (Exception exception)
                 {
