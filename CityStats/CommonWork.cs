@@ -15,7 +15,9 @@ namespace CityStats
 
         protected CommonWork()
         {
-            semaphoreSlim = new SemaphoreSlim(Convert.ToInt32(ConfigurationManager.AppSettings["initialCount"]),Convert.ToInt32(ConfigurationManager.AppSettings["maxCount"]));
+            int initialCount = Convert.ToInt32(ConfigurationManager.OpenExeConfiguration(@".\CityStats.exe").AppSettings.Settings["initialCount"].Value);
+            int maxlCount = Convert.ToInt32(ConfigurationManager.OpenExeConfiguration(@".\CityStats.exe").AppSettings.Settings["maxCount"].Value);
+            semaphoreSlim = new SemaphoreSlim(initialCount,maxlCount);
             cityAmount = new CityAmount();
         }
 

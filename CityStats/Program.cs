@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            CommonWork.ProcessData("http", @"G:\TestHttpMode\test.txt");
+            CommonWork.ProcessData("filesystem", @"G:\TestFileMode\");
         }
     }
 }
