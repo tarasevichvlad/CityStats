@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CityStats
+﻿namespace CityStats
 {
     class Program
     {
         static void Main(string[] args)
         {
+            CommonWork.ProcessData("http", @"G:\TestHttpMode\test.txt");
         }
     }
 }

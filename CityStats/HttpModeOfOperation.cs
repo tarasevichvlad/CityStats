@@ -69,6 +69,4 @@ namespace CityStats
             CreateOutputFile(GetListUrl(inputAddress));
         }
     }
-
-
 }
