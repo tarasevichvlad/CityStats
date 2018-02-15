@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            CommonWork.ProcessData("filesystem", @"G:\TestFileMode\");
+            CommonWork.ProcessData(args[0],args[1]);
         }
     }
 }
